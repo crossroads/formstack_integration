@@ -9,7 +9,7 @@ module FormstackIntegration
     def initialize(options = {})
       @mapping = options[:mapping] || {}
       @field_ids_to_ignore = options[:field_ids_to_ignore] || []
-      @convertors = options[:convertors] || {}
+      @converters = options[:converters] || {}
       @root_fields = %w(id remote_addr timestamp payment_status)
     end
 
@@ -49,11 +49,11 @@ module FormstackIntegration
     # Applies registered converters on the data
     #
     def convert!(data)
-      @convertors.each do |field, convertor|
+      @converters.each do |field, converter|
         data.each do |submission|
           key = field.to_s
           if submission.has_key?(key)
-            c = convertor.new(submission[key])
+            c = converter.new(submission[key])
             submission[key] = c.convert
           end
         end
