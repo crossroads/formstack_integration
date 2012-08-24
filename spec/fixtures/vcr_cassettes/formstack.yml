@@ -1,0 +1,47 @@
+--- 
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://www.formstack.com:443/api/forms?api_key=15AEC14F030D81E41C17298A846BBE09&type=json
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      connection: 
+      - keep-alive
+      content-type: 
+      - application/json
+      server: 
+      - nginx
+      date: 
+      - Mon, 02 Apr 2012 01:47:49 GMT
+      transfer-encoding: 
+      - chunked
+    body: "{\"status\":\"ok\",\"response\":{\"forms\":[{\"id\":\"2541364\",\"name\":\"My Form\",\"viewkey\":\"asdSDFASD\",\"views\":\"585\",\"created\":\"2012-02-13 22:33:17\",\"deleted\":\"0\",\"submissions\":\"2\",\"submissions_unread\":\"12\",\"submissions_today\":0,\"last_submission_id\":\"68800531\",\"last_submission_time\":\"2012-03-31 01:57:26\",\"url\":\"http:\\/\\/www.formstack.com\\/forms\\/?2541364-bKyRKsEbXR\",\"data_url\":\"\",\"summary_url\":\"\",\"rss_url\":\"\",\"encrypted\":false,\"thumbnail_url\":\"https:\\/\\/formstack.com\\/admin\\/images\\/user\\/form_thumbnail_2541364_4f39d659e7705.png\",\"submit_button_title\":null,\"inactive\":false,\"permissions\":300}]}}"
+    http_version: "1.1"
+- !ruby/struct:VCR::HTTPInteraction 
+  request: !ruby/struct:VCR::Request 
+    method: :get
+    uri: https://www.formstack.com:443/api/data?api_key=15AEC14F030D81E41C17298A846BBE09&id=2541364&type=json
+    body: 
+    headers: 
+  response: !ruby/struct:VCR::Response 
+    status: !ruby/struct:VCR::ResponseStatus 
+      code: 200
+      message: OK
+    headers: 
+      connection: 
+      - keep-alive
+      content-type: 
+      - application/json
+      server: 
+      - nginx
+      date: 
+      - Mon, 02 Apr 2012 04:36:28 GMT
+      content-length: 
+      - "4572"
+    body: "{\"status\":\"ok\",\"response\":{\"submissions\":[{\"id\":\"68800531\",\"timestamp\":\"2012-03-31 01:57:26\",\"user_agent\":\"Mozilla\\/5.0 (Windows NT 6.1) AppleWebKit\\/535.11 (KHTML, like Gecko) Chrome\\/17.0.963.83 Safari\\/535.11\",\"remote_addr\":\"127.0.0.1\",\"payment_status\":\"\",\"data\":[{\"field\":\"14889053\",\"value\":\"6\"},{\"field\":\"14719194\",\"value\":\"Org name 1\"},{\"field\":\"14889034\",\"value\":\"http:\\/\\/www.example1.com\"},{\"field\":\"14719195\",\"value\":\"Business\"},{\"field\":\"14889043\",\"value\":\"1\"},{\"field\":\"14889055\",\"value\":\"Org name 2\"},{\"field\":\"14889056\",\"value\":\"http:\\/\\/www.example2.com\"},{\"field\":\"14889058\",\"value\":\"Industry Organization\"},{\"field\":\"14889059\",\"value\":\"2\"},{\"field\":\"14889073\",\"value\":\"Org name 3\"},{\"field\":\"14889074\",\"value\":\"http:\\/\\/www.example3.com\"},{\"field\":\"14889076\",\"value\":\"Government\"},{\"field\":\"14889077\",\"value\":\"3\"},{\"field\":\"14889079\",\"value\":\"Org name 4\"},{\"field\":\"14889080\",\"value\":\"http:\\/\\/www.example4.com\"},{\"field\":\"14889082\",\"value\":\"Civil Society\"},{\"field\":\"14889083\",\"value\":\"4\"},{\"field\":\"14889340\",\"value\":\"Org name 5\"},{\"field\":\"14889341\",\"value\":\"http:\\/\\/www.example5.com\"},{\"field\":\"14889355\",\"value\":\"International Organization\"},{\"field\":\"14889356\",\"value\":\"5\"},{\"field\":\"14893180\",\"value\":\"Org name 6\"},{\"field\":\"14893182\",\"value\":\"http:\\/\\/www.example6.com\"},{\"field\":\"14893184\",\"value\":\"Other\"},{\"field\":\"14893185\",\"value\":\"6\"},{\"field\":\"14892635\",\"value\":\"Yes\"},{\"field\":\"14719756\",\"value\":\"Additional partner 1, Additional partner 2\\r\\nAdditional partner 3, Additional partner 4\"},{\"field\":\"14720644\",\"value\":\"true\"},{\"field\":\"14719197\",\"value\":\"Mr Main contact first main contact last\"},{\"field\":\"14719198\",\"value\":\"email@maincontact.com\"},{\"field\":\"14719200\",\"value\":\"11111111\"},{\"field\":\"15191172\",\"value\":\"main contact street\"},{\"field\":\"15191174\",\"value\":\"main contact street 2\"},{\"field\":\"15191176\",\"value\":\"main contact city\"},{\"field\":\"15191177\",\"value\":\"main contact state\"},{\"field\":\"15191179\",\"value\":\"main contact zip\"},{\"field\":\"15191180\",\"value\":\"57\"},{\"field\":\"14893034\",\"value\":\"6\"},{\"field\":\"14892954\",\"value\":\"Mr1 Additional contact first name 1 Additional contact last name 1\"},{\"field\":\"14893049\",\"value\":\"additional1@contact.com\"},{\"field\":\"14893048\",\"value\":\"Mr2 Additional contact first name 2 Additional contact last name 2\"},{\"field\":\"14892989\",\"value\":\"additional2@contact.com\"},{\"field\":\"14893051\",\"value\":\"Mr3 Additional contact first name 3 Additional contact last name 3\"},{\"field\":\"14893052\",\"value\":\"additional3@contact.com\"},{\"field\":\"14893054\",\"value\":\"Mr4 Additional contact first name 4 Additional contact last name 4\"},{\"field\":\"14893055\",\"value\":\"additional4@contact.com\"},{\"field\":\"14893057\",\"value\":\"Mr5 Additional contact first name 5 Additional contact last name 5\"},{\"field\":\"14893058\",\"value\":\"additional5@contact.com\"},{\"field\":\"14893059\",\"value\":\"Mr6 Additional contact first name 6 Additional contact last name 6\"},{\"field\":\"14893061\",\"value\":\"additional6@contact.com\"},{\"field\":\"14719320\",\"value\":\"7\\n12\\n18\\n24\"},{\"field\":\"14719647\",\"value\":\"Title\"},{\"field\":\"15110749\",\"value\":\"76\"},{\"field\":\"14889808\",\"value\":\"Summary, lorem ipsum\\r\\nline 2\\r\\nline 3\\r\\n\\r\\nNew paragraph\"},{\"field\":\"14893515\",\"value\":\"6\"},{\"field\":\"14720201\",\"value\":\"Target 1\\r\\n\\r\\nThis is a target\"},{\"field\":\"14890794\",\"value\":\"2012\"},{\"field\":\"14890812\",\"value\":\"Target 2\\r\\n\\r\\nThis is a target\"},{\"field\":\"14720203\",\"value\":\"2013\"},{\"field\":\"14890821\",\"value\":\"Target 3\\r\\n\\r\\nThis is a target\"},{\"field\":\"14890795\",\"value\":\"2014\"},{\"field\":\"14890829\",\"value\":\"Target 4\\r\\n\\r\\nThis is a target\"},{\"field\":\"14890830\",\"value\":\"2015\"},{\"field\":\"14893496\",\"value\":\"Target 5\\r\\n\\r\\nThis is a target\"},{\"field\":\"14893495\",\"value\":\"2016\"},{\"field\":\"14890832\",\"value\":\"Target 6\\r\\n\\r\\nThis is a target\"},{\"field\":\"14890833\",\"value\":\"2017\"},{\"field\":\"15094969\",\"value\":\"Supporting resources\\r\\n\\r\\nLine 2 and paragraph 2\\r\\n\\r\\nParagraph 3\"},{\"field\":\"15096799\",\"value\":\"Additional details\\r\\n\\r\\nLine 2 and paragraph 2\\r\\n\\r\\nParagraph 3\"},{\"field\":\"14719689\",\"value\":\"5\\n12\\n9\\n22\"},{\"field\":\"14719764\",\"value\":\"true\"},{\"field\":\"14890934\",\"value\":\"mr Signatory first name S Signatory last name\"},{\"field\":\"14890935\",\"value\":\"Signatory organisation name\"},{\"field\":\"15096881\",\"value\":\"Signatory Job Title\"},{\"field\":\"14890939\",\"value\":\"Mar 31, 2012\"},{\"field\":\"14719796\",\"value\":\"http:\\/\\/files.formstack.com\\/uploads\\/2541364\\/14719796\\/68800531\\/test.doc\"},{\"field\":\"14719730\",\"value\":\"1\\n2\"}]}],\"total\":1,\"pages\":1}}"
+    http_version: "1.1"
