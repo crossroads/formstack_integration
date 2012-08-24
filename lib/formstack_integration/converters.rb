@@ -14,7 +14,8 @@ module FormstackIntegration
         @str = str
       end
       def convert
-        !@str.blank? and @str.downcase == 'true'
+        return false if @str.nil? or @str.empty?
+        @str.downcase == 'true'
       end
     end
 
@@ -26,7 +27,8 @@ module FormstackIntegration
         @str = str
       end
       def convert
-        !@str.blank? ? Date.parse(@str) : nil
+        return nil if @str.nil? or @str.empty?
+        Date.parse(@str)
       end
     end
 
@@ -38,7 +40,8 @@ module FormstackIntegration
         @str = str
       end
       def convert
-        !@str.blank? ? @str.split("\n") : []
+        return [] if @str.nil? or @str.empty?
+        @str.split("\n")
       end
     end
 
